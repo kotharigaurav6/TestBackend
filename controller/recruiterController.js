@@ -16,7 +16,11 @@ export const recruiterVerifyEmailController = async (request, response) => {
     const updateResult = await recruiterSchema.updateOne({ email: email }, updateStatus);
     console.log("Update Result : ", updateResult);
     // response.render("recruiterLogin", { message: "Email Verified | Admin verification takes 24 Hours" });
-    response.redirect("http://localhost:3000/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+
+    // response.redirect("http://localhost:3000/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+
+    response.redirect("https://testfrontend-j0lb.onrender.com/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+
 }
 
 // export const recruiterLoginController = async(request,response)=>{
@@ -89,7 +93,10 @@ export const recruiterRegistrationController = async (request, response) => {
             contact: contact,
             address: address
         }
-        const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='http://localhost:3001/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
+        // const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='http://localhost:3001/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
+
+
+        const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='https://testbackend-2.onrender.com/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
 
         mailer.mailer(mailContent, email, async (info) => {
             if (info) {
