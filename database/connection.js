@@ -1,5 +1,7 @@
 // const url = "mongodb://127.0.0.1:27017/facultyrecruitmentsystem"
 // export default url;
+import dotenv from 'dotenv';
+dotenv.config();
 
-const url = "mongodb+srv://kotharigaurav6:gaurav_kothari1992@cluster0.hpwg6.mongodb.net/merndb?retryWrites=true&w=majority&appName=Cluster0";
+const url = process.env.MONGO_URI;
 export default url;
