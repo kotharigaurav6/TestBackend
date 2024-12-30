@@ -1,0 +1,27 @@
+<%- include('./homeHeader.ejs')%>
+
+    <div id="loginbox">
+        
+        <center><h2>Recruiter Registration</h2>
+        <form action="/recruiter/recruiterRegistration" method="post">
+            <input id="input" type="text" placeholder="Enter Name" name="name"> <br>
+            <select id="input" name="recruiter">
+                <option value="">Select Type</option>
+                <option value="School">School</option>
+                <option value="College">College</option>
+                <option value="Professional Institute">Professional Institute</option>
+            </select>
+            <input id="input" type="email" placeholder="Enter Email" name="email"> <br>
+
+            <input id="input" type="password" placeholder="Enter Password" name="password"> <br>
+            
+            <input id="input" type="text" maxlength="10" placeholder="Enter 10-digit Mobile No." name="contact"> <br>
+           
+            <textarea name="address" rows="3" cols="39" placeholder="Enter Address"></textarea>
+
+            <input id="inputbtn" type="submit" value="Register"> <br>
+            <input id="inputbtn" type="reset" value="Reset"> <br>
+        </form>    
+        <a id="demolink" href="/recruiter/recruiterLogin">Already Registered ? Login Here</a>
+    </center>
+    </div>
