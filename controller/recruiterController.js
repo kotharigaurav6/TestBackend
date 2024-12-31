@@ -19,7 +19,7 @@ export const recruiterVerifyEmailController = async (request, response) => {
 
     // response.redirect("http://localhost:3000/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
 
-    response.redirect("https://testfrontend-j0lb.onrender.com/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+    response.redirect("https://testfrontend-2.onrender.com/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
 
 }
 
