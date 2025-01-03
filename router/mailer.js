@@ -4,8 +4,8 @@ var mailer = function(mailContent,email,callback){
     const transporter = nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user:'onlinespareparts2019@gmail.com',
-            pass:'vdbzzfpagidqntma'
+            user:'your_mail@gmail.com',
+            pass:'your_password'
         }
     });    
     const mailOption = {
